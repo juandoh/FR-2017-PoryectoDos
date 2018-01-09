@@ -1,0 +1,18 @@
+------------Cliente DHCP------------------
+conf ter
+int f0/1
+ip add dhcp
+no sh
+exit
+exit
+
+conf ter
+ip domain-lookup
+exit
+
+show ip dhcp binding
+----------------------------------
+listo ya se puede conectar a la internet
+se comprueba con el siguiente comando
+ping www.google.com.au
+ping facebook.com

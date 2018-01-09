@@ -1,0 +1,21 @@
+----configuracion ---------
+config ter
+service dhcp
+network 192.168.0.0 255.255.255.0
+default-router 192.168.0.1
+dns-server 8.8.8.8 8.8.4.4
+lease 24
+exit
+
+ip dhcp excluded-address 192.168.0.2 192.168.0.10
+exit
+
+conf ter
+int f0/0
+ip add 192.168.0.1 255.255.255.0
+no sh
+exit
+-------------------------------------------
+Usamos el siguiente para ver la interface que se asigno en f0/0 que sea DHCP
+
+show ip int brief
