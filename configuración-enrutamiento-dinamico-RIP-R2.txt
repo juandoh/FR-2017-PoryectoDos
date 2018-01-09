@@ -1,0 +1,10 @@
+------------configuracion router R2---------------
+conf ter
+router rip
+no auto-summary
+version 2
+network 10.20.20.0
+network 192.168.1.0
+exit
+exit
+wr
